@@ -21,7 +21,7 @@ void main(){
 	
 	
 	printf("Select the required option \n");
-	printf("1.Find the PageFault Rate\n");
+	printf("1.PageFault Rate\n");
 	printf("2.Exit");
 	scanf("%d",&swtch);
 	switch(swtch){
