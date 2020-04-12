@@ -5,17 +5,11 @@ Ques. 21. Consider a scenario of demand paged memory. Page table is held in regi
 
 Ans- 
 
-Here we have to find an effective access time (EAT) for a given page-fault rate. 
-so we have to solve for 'p':
-Time taken to service page Fault for empty page or unmodified page = 8ms.
-Time taken to service page Fault for modified page = 20ms
-Memory access time = 100ns
-EAT = 200ns
-      EAT = (1-p)*(100) + (p)*(100 + (1-.7)*(8msec) + (.7)*(20msec))   
-	  = 100 - 100p + 100p + (2.4e6)*p + (14e6)*p
-	  = 100 + (16.4e6)*p
-      200 = 100 + (16.4e6)*p
-      p = 100/16.4e6 = 6.0976 apx...
-
-
+Let p be the page fault rate (the probability that a memory access results in a page
+fault). Then (1 − p) is the probability that a memory access costs 100 nsec. The
+probability that a page fault costs 20 msec is 0.7 ∗ p and the probability that a page
+fault costs 8 msec is 0.3 ∗ p. Since 1 nsec = 1000000 msec,
+(1 − p) ∗ 100 + 0.7 ∗ p ∗ 20000000 + 0.3 ∗ p ∗ 8000000 = 200
+(14000000 + 2400000 − 100)p = 100
+p = 100/(16400100) = 6.1 ∗ 10−6 = .0000061 = .00061%
 
